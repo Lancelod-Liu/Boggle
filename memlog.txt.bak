@@ -1,0 +1,43 @@
+Submission time	Wed-23-Apr 13:26:35
+
+Test 1: memory with dictionary-algs4.txt (must be <= 2x reference solution).
+  - memory of dictionary[]           = 494472 bytes
+  - memory of student   BoggleSolver = 18608600 bytes
+  - memory of reference BoggleSolver = 5135408 bytes
+  - student / reference              = 3.62
+==> FAILED
+
+Submission time	Wed-23-Apr 13:36:55
+
+Test 1: memory with dictionary-algs4.txt (must be <= 2x reference solution).
+  - memory of dictionary[]           = 494472 bytes
+  - memory of student   BoggleSolver = 18625080 bytes
+  - memory of reference BoggleSolver = 5135408 bytes
+  - student / reference              = 3.63
+==> FAILED
+
+Submission time	Wed-23-Apr 13:46:01
+
+
+Test 1: memory with dictionary-algs4.txt (must be <= 2x reference solution).
+  - memory of dictionary[]           = 494472 bytes
+  - memory of student   BoggleSolver = 18617672 bytes
+  - memory of reference BoggleSolver = 5135408 bytes
+  - student / reference              = 3.63
+==> FAILED
+
+
+修改了DictSET的基本节点数 128 -> 26
+Submission time	Wed-23-Apr 13:56:51
+Test 1: memory with dictionary-algs4.txt (must be <= 2x reference solution).
+  - memory of dictionary[]           = 494472 bytes
+  - memory of student   BoggleSolver = 4562888 bytes
+  - memory of reference BoggleSolver = 5135408 bytes
+  - student / reference              = 0.89
+==> passed
+
+Test 2: memory with dictionary-shakespeare.txt (must be <= 2x reference solution).
+  - memory of dictionary[]           = 1925392 bytes
+  - memory of student   BoggleSolver = 15321512 bytes
+  - memory of reference BoggleSolver = 17479568 bytes
+  - student /

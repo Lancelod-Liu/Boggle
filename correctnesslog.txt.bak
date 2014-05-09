@@ -1,0 +1,70 @@
+修改了QU的问题
+现在碰到QU自动增加深度1 
+即当做多走一格 这样实现了不修改其他部分代码 自动对QUA 等单词进行深度矫正
+从而也修改了深度的定义 深度此时被定义为 单词的长度
+Submission time	Wed-23-Apr 14:24:31
+Test 7: test getAllValidWords() on boards with a Q
+  *  dictionary = dictionary-yawl.txt; board = board-qwerty.txt
+  *  dictionary = dictionary-yawl.txt; board = board-quinquevalencies.txt
+  *  dictionary = dictionary-yawl.txt; board = board-inconsequentially.txt
+      -  student   solution has 272 non-null entries
+      -  reference solution has 273 non-null entries
+      -  1 missing entry in student solution: INCONSEQUENTIALLY
+  *  dictionary = dictionary-yawl.txt; board = board-qaimaqam.txt
+  *  dictionary = dictionary-yawl.txt; board = board-aqua.txt
+  *  dictionary = dictionary-yawl.txt; board = 100 random Hasbro boards
+  *  dictionary = dictionary-16q.txt; board = board-9q.txt
+      -  student   solution has 3 non-null entries
+      -  reference solution has 8 non-null entries
+      -  5 missing entries in student solution, including: QUQUQUQUQUQUQUQUQU
+  *  dictionary = dictionary-16q.txt; board = board-16q.txt
+      -  student   solution has 7 non-null entries
+      -  reference solution has 15 non-null entries
+      -  8 missing entries in student solution, including: QUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQU
+==> FAILED
+
+修正了QU的另一个小问题.
+在每次碰到QU的时候 除了深度加1 最大值也要加1
+但是结果中出现了长度为16个QU的(这是对的) 却没有长度为2个QU的(这是有问题的)
+Submission time	Wed-23-Apr 14:36:31
+Test 7: test getAllValidWords() on boards with a Q
+  *  dictionary = dictionary-yawl.txt; board = board-qwerty.txt
+  *  dictionary = dictionary-yawl.txt; board = board-quinquevalencies.txt
+      -  student   solution has 129 non-null entries
+      -  reference solution has 130 non-null entries
+      -  1 missing entry in student solution: QUA
+  *  dictionary = dictionary-yawl.txt; board = board-inconsequentially.txt
+  *  dictionary = dictionary-yawl.txt; board = board-qaimaqam.txt
+      -  student   solution has 7 non-null entries
+      -  reference solution has 8 non-null entries
+      -  1 missing entry in student solution: QUA
+  *  dictionary = dictionary-yawl.txt; board = board-aqua.txt
+      -  student   solution has 0 non-null entries
+      -  reference solution has 1 non-null entries
+      -  1 missing entry in student solution: QUA
+  *  dictionary = dictionary-yawl.txt; board = 100 random Hasbro boards
+      -  student   solution has 87 non-null entries
+      -  reference solution has 88 non-null entries
+      -  1 missing entry in student solution: QUA
+      -  failed on trial 1 of 100
+         4 4
+         O  O  R  R  
+         I  S  Qu Z  
+         N  A  G  D  
+         A  L  S  T
+
+  *  dictionary = dictionary-16q.txt; board = board-9q.txt
+      -  student   solution has 7 non-null entries
+      -  reference solution has 8 non-null entries
+      -  1 missing entry in student solution: QUQU
+  *  dictionary = dictionary-16q.txt; board = board-16q.txt
+      -  student   solution has 14 non-null entries
+      -  reference solution has 15 non-null entries
+      -  1 missing entry in student solution: QUQU
+==> FAILED
+
+彻底修复QU的短字符串查找
+搜索长度从2开始 为了解决会增加多余字符串的问题 通过对length == 2进行判断
+如果字符串里不包含QU 则不添加这个字符串 
+如果包含的话 则进入下一个判断 判断是否在字典里
+Submission time	Wed-23-Apr 15:05:56

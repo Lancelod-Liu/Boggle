@@ -1,0 +1,96 @@
+最终目标 2000次/秒
+
+Submission time	Wed-23-Apr 15:05:56
+Test 3: timing findAllWords() for 1.0 seconds (must be <= 25x reference solution).
+      - reference solution calls per second: 4835.16
+      - student   solution calls per second: 88.00
+      - reference / student ratio:           54.95
+
+==> FAILED
+
+Test 4: timing findAllWords() for 1.0 seconds (must be <= 10x reference solution).
+      - reference solution calls per second: 4860.00
+      - student   solution calls per second: 75.71
+      - reference / student ratio:           64.19
+
+==> FAILED
+
+Test 5: timing findAllWords() for 1.0 seconds (must be <= 5x reference solution).
+      - reference solution calls per second: 4830.00
+      - student   solution calls per second: 81.19
+      - reference / student ratio:           59.49
+
+==> FAILED
+
+Test 6: timing findAllWords() for 3.0 seconds (must be <= 2x reference solution).
+      - reference solution calls per second: 4806.67
+      - student   solution calls per second: 81.97
+      - reference / student ratio:           58.64
+
+==> FAILED
+
+修改了保存当前路径的栈为数组
+从而不需要进行字符串的反转
+预计提速应该可以达到200每秒.[失败]
+Submission time	Wed-23-Apr 15:40:09
+Test 3: timing findAllWords() for 1.0 seconds (must be <= 25x reference solution).
+      - reference solution calls per second: 4735.26
+      - student   solution calls per second: 77.61
+      - reference / student ratio:           61.01
+
+==> FAILED
+
+Test 4: timing findAllWords() for 1.0 seconds (must be <= 10x reference solution).
+      - reference solution calls per second: 4710.00
+      - student   solution calls per second: 79.37
+      - reference / student ratio:           59.35
+
+==> FAILED
+
+Test 5: timing findAllWords() for 1.0 seconds (must be <= 5x reference solution).
+      - reference solution calls per second: 4645.35
+      - student   solution calls per second: 72.21
+      - reference / student ratio:           64.33
+
+==> FAILED
+
+Test 6: timing findAllWords() for 3.0 seconds (must be <= 2x reference solution).
+      - reference solution calls per second: 4670.00
+      - student   solution calls per second: 82.33
+      - reference / student ratio:           56.72
+
+==> FAILED
+
+修改了搜索过程
+预定义最大搜索距离 只要当前搜索的词在dict里就加到paths里[有问题]
+只要没到最大搜索距离就继续搜索 
+达到了最大搜索距离直接返回
+预计提速应该可以达到200每秒.
+Submission time	Wed-23-Apr 15:53:22
+出现了正确性问题 进行了修正 确认为误添加了长度小于3的非法单词.
+现在首先判断是否在字典里 如果在字典里则进一步判断深度
+对于深度等于2的情况要特殊处理一下 确认字符串里有没有Q 
+如果有Q说明此字符串也是有效的
+预计提速应该可以达到200每秒. [实际600每秒]
+Submission time	Wed-23-Apr 16:03:00
+Test 5: timing findAllWords() for 1.0 seconds (must be <= 5x reference solution).
+      - reference solution calls per second: 4265.73
+      - student   solution calls per second: 585.00
+      - reference / student ratio:           7.29
+
+==> FAILED
+
+Test 6: timing findAllWords() for 3.0 seconds (must be <= 2x reference solution).
+      - reference solution calls per second: 4060.00
+      - student   solution calls per second: 581.56
+      - reference / student ratio:           6.98
+
+==> FAILED
+
+
+Total: 4/6 tests passed!
+
+
+400points 2000 cycle
+1.13s  -> test 6 2.54
+0.843s -> test 6 1.81
